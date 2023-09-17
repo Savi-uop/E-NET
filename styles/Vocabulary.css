@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top right,#1f2222, #1f8787);
+    background-attachment: fixed;
+    background-position: 0% 100%; 
+}
+.body-container{
+    display: block;
+    position: relative;
+    margin-top: 50px;
+}
+#quiz{
+    position: relative;
+}
+
+/*nav bar*/
+#logo{
+    width: 72px;
+    height: 40px;
+    margin: 0px 20px ;
+    padding: 0;
+    border-radius: 20px;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+.nav-item{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 06px 20px 0px 20px;
+
+}
+
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+
+
+.navbar .navbar-nav .nav-link:hover{
+    color: rgba(32,140,140,0.5);
+}
+
+#nav-vocab{
+    color:  rgba(32,140,140,1);
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    padding: 0;
+}
+/* Menu Items CSS */
+.menu{
+    background-color:#1f2222;
+    padding: 0;
+    position: relative;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+.menu #tense-btn{
+    border: none;
+    padding: 8px 8px 10px 15px;
+    background-color:#1f2222;
+    color: #ffffff;
+    transition: .5s;
+    cursor: pointer;
+
+}
+
+.menu li {
+    padding: 8px 8px 10px 15px;
+    background-color: #1f2222;
+    color: #ffffff;
+    transition: .5s;
+    cursor: pointer;
+}
+
+/* When hover and active Main menu Items */
+.menu #tense-btn:hover, .dot.active, .menu li:hover{
+    background-color: #1f8888;
+    border-radius: 12px;
+}
+
+
+.slide{
+    display: none;
+}
+
+
+
+/*--footer*/
+.footer{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    max-width: 100vw;
+}
+
+.form-control{
+    border-right: none;
+}
+
+
+.send-email{
+ background-color: transparent;
+ margin-top: 0 !important;
+}
+.send-email:hover,.send-email.focus,.send-email.active{
+    background-color: transparent;
+    color:rgba(32,140,140,1);
+    font-size: small;
+}
+
+.footer-page-links ul li,.social-media ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+.footer-page-links ul li a,.social-media ul li a{
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.footer-page-links ul li a:hover,.social-media ul li a:hover{
+    color: rgba(32,140,140,1);
+}
+
+
+.footer-page-links{
+    font-size: 15px;
+}
+
+.copyright, .copyright a{
+    color: rgba(225, 255, 255, .8);
+    font-size: 10px;
+    text-decoration: none;
+    
+}
+
+/* This CSS for newly added menu button in modile mode */
+.body-container .menu .menu-hide{
+    display: none;
+}
+.body-container .menu-show{
+    display: none;
+}
+
+.slide h1{
+    font-weight: bold;
+    color: rgb(230, 125, 51);
+    margin-bottom: 20px;
+}
+.slide h5{
+    color: rgb(13, 167, 206);
+}
+.slide h6{
+    color: rgb(5, 190, 175);
+}
+.slide h4{
+    color: khaki;
+    margin-bottom: 20px;
+}
+.slide h3{
+    color: rgb(13, 167, 206);
+    font-weight: 600;
+}
+
+/* Antonyms */
+ul li{
+    color: rgb(233, 223, 136);
+}
+.slide ul a{
+    color: rgb(237, 255, 71);
+}
+#Antonyms p{
+    color: white;
+}
+
+/*idioms */
+#Idioms .row{
+    align-items: center;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+#Idioms .equal{
+/* vertical-align: middle;*/
+    width: 50px;
+    height:50px;
+    margin: 0;
+
+}
+#Idioms .sideImages{
+    width:200px;
+    height: 200px;
+}
+
+
+/* end idioms */
+
+/* style for table */
+td,th{ 
+    font-size: 16px;
+    border: 2px solid rgba(129, 129, 129, 0.479);
+    border-collapse: collapse; 
+    color:rgb(216, 216, 216);
+    text-align: center; 
+    cursor: pointer;
+    padding: 10px;
+}
+.synonyms-table tr{
+    height: 65px;
+}
+/* only for .synonyms-table */
+.synonyms-table td{
+    max-width: 50px;
+    font-size: 14px;
+    padding: 0px;
+}
+td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+/* only of tongue slide table */
+#Tongue table tr td:first-child{
+    text-align: left;
+}
+
+th{
+    background-color: rgba(0, 0, 0, 0.829); 
+}
+table tr:nth-child(even){ 
+
+    background-color:rgba(0, 0, 0, 0.329); 
+}
+
+table tr:nth-child(odd){ 
+
+    background-color: rgba(0, 0, 0, 0.329); 
+}
+
+
+/*--media quaries--*/
+@media only screen and (max-width: 1024px) {
+    #Idioms .sideImages{
+        width:150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .form{
+        max-width: 40%;
+        margin: auto;
+    }
+    /*  menu Css on mobile verision */
+    .body-container .slide{
+        margin-top: 30px;
+    }
+    .body-container .menu{
+        z-index: 3;
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: all .5s;
+    }
+    .body-container .menu ul{
+        position: relative;
+    }
+    .body-container .menu-show{
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        
+    }
+    .body-container .menu .menu-hide{
+        display: flex;
+        justify-content: flex-end;
+    }
+    :is(.menu-show, .menu-hide) .button{
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 8px;
+        border-radius: 0 30px 30px 0;
+        background: #1f22228c;
+        cursor: pointer;
+    }
+    .menu-show .button p{
+        color: white;
+    }
+    :is(.menu-hide, .menu-show) .icon{
+        height: 35px;
+        width: 35px;
+        border: 2px solid transparent;
+        text-align: center;
+        font-size: 30px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.596);
+        border-color:rgba(255, 255, 255, 0.596);
+        border-radius: 50%;
+    }
+    :is(.menu-hide, .menu-show) .icon:hover{
+        border: 3px solid;
+        color: #ffffff;
+        border-color: #ffffff;;
+    }
+    .quiz-contain{
+        margin-bottom: 35px;
+    }
+
+    /* table Query */
+    #table-wrapper p{
+        text-align: center;
+    }
+    .synonyms-table td{  
+        font-size: 16px;
+    }
+    /* Idioms slide CSS */
+    #Idioms .sideImages{
+        width:100px;
+        height: 100px;
+    }
+    #Idioms .equal{
+        /* vertical-align: middle;*/
+            width: 40px;
+            height:40px;
+        
+    }
+    #Tongue th,#Tongue td{
+        padding: 5px;
+        font-size: 14px;
+    }
+    #Tongue table{
+        margin-bottom: 20px;
+    }
+    #Tongue .row,#Tongue .container{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .form{
+        max-width: 300px;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 1050px){
+    .menu{
+        max-width: 260px;
+    }
+    .menu >*{
+        max-width: 260px;
+    }
+}
+
+
+
+

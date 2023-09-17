@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+#speech{
+    position: relative;
+}
+
+/*nav bar*/
+#logo{
+    width: 72px;
+    height: 40px;
+    margin: 0px 20px ;
+    padding: 0;
+    border-radius: 20px;
+}
+.ml-auto{
+    margin-left: auto;
+}
+
+.nav-item{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 06px 20px 0px 20px;
+
+}
+
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+
+
+.navbar .navbar-nav .nav-link:hover{
+    color: rgba(32,140,140,0.5);
+}
+
+#nav-speech{
+    color:  rgba(32,140,140,1);
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    padding: 0;
+    max-width: 100vw;
+}
+
+
+body{
+    background-image: linear-gradient(to top right,#1f2222, #1f8787);
+    background-attachment: fixed;
+    background-position: 0% 100%;
+}
+
+.body-container{
+    display: block;
+    position: relative;
+    margin-top: 50px;
+}
+
+/* right side menu CSS */
+.menu{
+background-color:#1f2222;
+padding: 0;
+position: relative;
+}
+
+.menu ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+position: fixed;
+}
+
+.menu #tense-btn{
+border: none;
+padding: 8px 8px 10px 15px;
+background-color:#1f2222;
+color: #ffffff;
+transition: .5s;
+cursor: pointer;
+
+}
+/* Menu Items CSS */
+.menu li {
+padding: 8px 8px 10px 15px;
+background-color: #1f2222;
+color: #ffffff;
+transition: .5s;
+cursor: pointer;
+}
+
+/* When hover and active Main menu Items */
+.menu #tense-btn:hover, .dot.active, .menu li:hover{
+background-color: #1f8888;
+border-radius: 12px;
+}
+
+.slide{
+display: none;
+}
+/* Speach page CSS end */
+
+
+
+/*--footer*/
+.footer{
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 100vw;
+}
+
+.form-control{
+    border-right: none;
+}
+.send-email{
+ background-color: transparent;
+ margin-top: 0 !important;
+}
+.send-email:hover,.send-email.focus,.send-email.active{
+    background-color: transparent;
+    color:rgba(32,140,140,1);
+    font-size: small;
+}
+
+.footer-page-links ul li,.social-media ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+.footer-page-links ul li a,.social-media ul li a{
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.footer-page-links ul li a:hover,.social-media ul li a:hover{
+    color: rgba(32,140,140,1);
+}
+
+
+.footer-page-links{
+    font-size: 15px;
+}
+
+.copyright, .copyright a{
+    color: rgba(225, 255, 255, .8);
+    font-size: 10px;
+    text-decoration: none;
+    
+}
+/* This CSS for newly added menu button in mobile mod */
+.body-container .menu .menu-hide{
+    display: none;
+}
+.body-container .menu-show{
+    display: none;
+}
+
+/*--media quaries--*/
+@media only screen and (max-width: 768px) {
+    .form{
+        max-width: 40%;
+        margin: auto;
+    }
+    /* newly added cSS */
+    .body-container .slide{
+        margin-top: 30px;
+    }
+    .body-container .menu{
+        z-index: 3;
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: all .5s;
+    }
+    .body-container .menu ul{
+        position: relative;
+    }
+    .body-container .menu-show{
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        
+    }
+    .body-container .menu .menu-hide{
+        display: flex;
+        justify-content: flex-end;
+    }
+    :is(.menu-show, .menu-hide) .button{
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 8px;
+        border-radius: 0 30px 30px 0;
+        background: #1f22228c;
+        cursor: pointer;
+    }
+    .menu-show .button p{
+        color: white;
+    }
+    :is(.menu-hide, .menu-show) .icon{
+        height: 35px;
+        width: 35px;
+        border: 2px solid transparent;
+        text-align: center;
+        font-size: 30px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.596);
+        border-color:rgba(255, 255, 255, 0.596);
+        border-radius: 50%;
+    }
+    :is(.menu-hide, .menu-show) .icon:hover{
+        border: 3px solid;
+        color: #ffffff;
+        border-color: #ffffff;;
+    }
+    /* quiz butoo CSS */
+    .quiz-contain{
+        margin-bottom: 35px;
+    }
+}
+
+  @media only screen and (max-width: 660px) {
+    .form{
+        max-width: 300px;
+        margin: auto;
+    }
+}
+
+/* varb part*/
+
+.listBlue li a{ color: #40B0DF; }
+
+.irtable { font-size: 2vw; }
+
+.irTable, .irTable2{ 
+width: 100%;
+box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5); 
+
+} 
+
+.irTable,.irTable2,td,th{ 
+
+padding: 10px; 
+
+border: 2px solid rgba(129, 129, 129, 0.479); 
+
+border-collapse: collapse; 
+
+background-color: rgba(0, 0, 0, 0.329);
+
+color:rgb(216, 216, 216);
+
+text-align: center; 
+
+cursor: pointer; 
+
+} 
+
+.irTable td,.irTable2 td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.irTable th,.irTable2 th{ 
+    background-color: rgba(0, 0, 0, 0.329); 
+} 
+
+
+.irTable tr:nth-child(odd){ 
+    background-color: rgba(0, 0, 0, 0.329); 
+} 
+
+
+ .irTable tr:nth-child(even){ 
+    background-color:rgba(0, 0, 0, 0.329); 
+}
+
+.irTable2 tr:nth-child(n+6) {
+    background-color: rgba(0, 0, 0, 0.329); 
+}
+
+
+.irTable2 tr:nth-child(-n+5){
+    background-color:rgba(0, 0, 0, 0.329); 
+}
+
+/* end verb and adverb*/
+
+.changeTx2 {
+  color: #F37970;
+  font-style:talic;
+}
+
+.changeTx1{
+  color:#FFF387;
+}
+
+.conjunction h5 {
+  color: turquoise;
+}
+.rule {
+  color :#F37970;
+}
+
+.changeExample{
+  color :#FFF387;
+}
+/*end of conjunction */
+
+div img{
+    margin: 0;
+    max-width: 100% !important;
+    height: auto;
+}
+
+/*media quaries for table*/
+@media only screen and (max-width: 440px){
+    .irTable, .irTable2, td, th {
+       padding: 5px;
+       
+    }
+}
+
+
+
+@media only screen and (max-width: 510px){
+    .verb-table, td, th {
+       padding: 4px;
+       font-size: medium;
+       margin: 0;
+    }
+}
+@media only screen and (max-width: 455px){
+    .verb-table, td, th {
+       padding: 1px;
+       font-size: small;
+       margin: 0;
+    }
+}
+.prepo-table-title{
+    color: rgb(216, 216, 216);
+    background-color: rgba(0, 0, 0, 0.329);
+    border: solid rgba(129, 129, 129, 0.479);
+}
+.prep{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 100%;
+    border: rgba(129, 129, 129, 0.479) 1px;
+}
+.co{
+    flex: 16.666666%;
+    max-width: 16.666666%;
+    padding: 0;
+}
+.co div{
+    color: rgb(216, 216, 216);
+    font-size: medium;
+    width: auto;
+    border: rgba(129, 129, 129, 0.479) solid 0.5px;
+    border-collapse:collapse;
+
+}
+.prep div{ 
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+@media only screen and (max-width: 510px){
+    .co{
+        flex: 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+@media only screen and (max-width: 470px){
+    .prop-rule-table .table-secondary th,.prop-rule-table .table-secondary td{
+        padding: 2px;
+    }
+}
+
+.quiz-contain{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    
+}
+
+.quiz-contain button{ 
+    color: rgb(10, 97, 97);
+    background: linear-gradient(135deg, #f8f8f8, #FFFFFF);
+    padding: 10px 20px;
+    color: rgb(10, 97, 97);
+    border-radius: 20px;
+    border: solid rgb(10, 97, 97);
+    box-shadow: 0px 2px 5px #000000;
+    align-self: center;
+}
+.quiz-contain button:hover{
+    background:linear-gradient(135deg, #1f8787, #0c3636);
+    color: rgb(255, 255, 255);
+    border: solid rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 768px) {
+    .quiz-contain{
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1050px){
+    .menu{
+        max-width: 260px;
+    }
+    .menu >*{
+        max-width: 260px;
+    }
+}

@@ -1,0 +1,83 @@
+table,th,td{
+    padding: 10px; 
+    border: 2px solid rgba(129, 129, 129, 0.479); 
+    border-collapse: collapse; 
+    color:rgb(216, 216, 216);
+    text-align: center; 
+    cursor: pointer; 
+}
+td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+th{
+    background-color: rgba(0, 0, 0, 0.329); 
+}
+table tr:nth-child(even){ 
+
+    background-color:rgba(0, 0, 0, 0.329); 
+}
+
+table tr:nth-child(odd){ 
+
+    background-color: rgba(0, 0, 0, 0.329); 
+}
+
+p{
+    color:white;
+}
+
+.d-flex{
+    color:rgb(160, 252, 217);
+}
+
+h2{
+    font-weight: bold;
+    color: white;
+    
+}
+
+
+h1{
+    color: rgb(161, 241, 252);
+    font-weight: bold;
+}
+
+li{
+    color: white;
+}
+h3,h4,h5,h6{
+    font-weight: bold;
+    color: white;
+
+}
+
+/* future tenses CSS */
+.future ul li{
+    color: rgb(233, 223, 136);
+}
+.future h1{
+    color: rgb(161, 241, 252);
+    font-weight: bold;
+}
+.future h6{
+    color: rgb(160, 252, 217);
+}
+.future table th,.future table td{
+    color: rgb(216, 216, 216);
+    border-color: rgba(129, 129, 129, 0.479);
+}
+.future table tr{
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+/*simple present pretable table*/
+
+.pretable tr th{
+    padding: 10px;
+    border-collapse: collapse; 
+    text-align: center; 
+
+}

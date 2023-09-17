@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Net</title>
+    <link rel="shortcut icon" href="../images/Elogo.png">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/Quiz.css">
+    <!--fontawsome icon script-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
+</head>
+<body>
+  <header id="quiz">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img id="logo" src="../images/nav-logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a id="nav-home" class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Grammer.html">Grammar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Vocabulary.html">Vocabulary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Speech.html">Speech</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-quiz" href="../pages/Quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/About.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--nav bar end-->
+  
+  <!-- Invisible Quize Box Wrapper  -->
+  <div class="quizes-wrapper">
+    <!--Quiz rules Window-->
+    <div id="quize-rules">
+      <div class="quize-box col-11">
+        <div class="rule-title">
+            <span>Importent Rulers of this Quiz</span>
+            <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <ol class="rule-list">
+            <li class="info">There are 5 numbers of question in this quiz.</li>
+            <li class="info">Once you select your answer, you can't reselect.</li>
+            <li class="info">You'll get points on the basis of your correct answers.</li>
+        </ol>
+        <div class="rule-footer">
+          <div class="continue-btn">Continue</div>
+        </div>
+      </div>
+    </div>
+    <!-- Quiz question window-->
+    <div id="quize-question">
+      <div class="quize-box col-11">
+        <div class="quiz-title">
+          <div class="d-flex justify-content-between">
+            <h2 class="me-1">Quiz Type :</h2>
+            <h2></h2>
+          </div>
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div class="quiz-body">
+           <!-- in run tim javascript will inject html code here   -->
+        </div>
+        <footer class="quiz-footer">
+          <div class="next-btn">Next</div>
+        </footer>
+      </div>
+    </div>
+    <!-- Quzes Result window -->
+    <div id="quiz-result">
+      <div class="quize-box col-11">
+        <div class="result-title">
+          <h2>Quiz Result</h2>
+        </div>
+        <div class="result-body">
+        <!-- in run tim javascript will inject html code here   -->
+        </div>
+        <div class="result-footer">
+          <div class="replay-btn" onclick="replayQuiz()">Replay</div>
+          <div class="exit-btn">Exit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--Quzes page visible bodypart-->
+  <div class="body-part">
+    <div class="container my-5">
+      <div class="body-title">
+        <div class="title-logo">
+          <img src="../images/Elogo.png" alt="">
+        </div>
+        <div class="title-txt">
+          <h1>E - NET Quiz Time</h1>
+          <p>Test your English knowlege FREE online! Do as many quiz as you like. Get the answer after each question. Try to get Golden Trophy for all Quizes.</p>
+        </div>
+      </div>
+      <hr>
+      <div id="lesson-tenses" class="my-5 mx-auto col-12 d-flex justify-content-center align-items-center">
+        <h2 class="info">Quizes for Tenses</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="img">
+                <img src="../images/QuizeLogo/pre sim.png" alt="Img">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Simple Present</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/pre con.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Present Continuous</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/pre per.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Present Perfect</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/Pres pp.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Present Perfect Continuous</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="img">
+                <img src="../images/QuizeLogo/past sim.png" alt="Img">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Simple Past</h5>
+
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/past con.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Past Continuous</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/past per.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Past Perfect</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/past pp.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Past Perfect Continuous</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="img">
+                <img src="../images/QuizeLogo/fu sim.png" alt="Img">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Simple Future</h5>
+
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/fu con.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Future Continuous</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/fu per.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Future Perfect</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/fu pp.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Future Perfect Continuous</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="lesson-tenses" class="my-5 mx-auto col-12 d-flex justify-content-center align-items-center">
+        <h2 class="info">Speech Quizzes</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="img">
+                <img src="../images/QuizeLogo/Nouns.png" alt="Img">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Noun</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/Verb.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Verb</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/Adverb.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Adverb</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="img">
+              <img src="../images/QuizeLogo/Adjectives.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Adjective</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-12 d-lg-flex justify-content-center">
+          <div class="card col-lg-10">
+            <div class="img">
+              <img src="../images/QuizeLogo/Pronoun.png" alt="Img">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title">Pronoun</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 d-lg-flex justify-content-center">
+          <div class="card col-lg-10">
+            <div class="img">
+              <img src="../images/QuizeLogo/Preposition.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Preposition</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 d-lg-flex justify-content-center">
+          <div class="card col-lg-10">
+            <div class="img">
+              <img src="../images/QuizeLogo/Conjuntion.png" alt="Img">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Conjunction</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!--footer start-->
+    <footer class="footer text-center">
+      <div class="container-fluid">
+        <div class="row pt-4">
+          <div class="col-md-4">
+            <div class="footer-page-links row">
+              <ul class="m-0 mb-2">
+                <li>
+                  <a href="../index.html">Home</a>
+                </li>
+                <li>
+                  <a href="About.html">About</a>
+                </li>
+                <li>
+                  <a href="">Terms</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+            <div class="form">
+              <div class="input-group input-group-sm w-75 mx-auto">
+                <input type="email" class="form-control shadow-none send-email" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append input-group-sm">
+                  <button class="btn btn-outline-light shadow-none send-email" type="button"><i class="fas fa-paper-plane"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="social-media row">
+              <ul class="mb-0">
+                <li>
+                  <a href="https://twitter.com/learnWitheNET?t=SgIQqCTq5IBygEoVj4AjLA&s=08" target="_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/Enet.RSLUP" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/enet.rslup/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"><i class="fas fa-globe-asia"></i></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center copyright  pt-2 pb-3">© 2021 Copyright:<a href="#"> RSLUP GROUP-2</a>
+        </div>
+      </div>
+    </footer> 
+    <!--Jquery JS-->
+    <script src="../scripts/jquery.js"></script>
+    <!--Bootstrap JS-->
+    <script src="../scripts/bootstrap.bundle.js"></script>
+    <!-- other js parts -->
+    <script src="../scripts/Quize.js"></script>
+</body>
+</html>

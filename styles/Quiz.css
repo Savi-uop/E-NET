@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+#quiz{
+    position: relative;
+}
+
+/*nav bar*/
+#logo{
+    width: 72px;
+    height: 40px;
+    margin: 0px 20px ;
+    padding: 0;
+    border-radius: 20px;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+.nav-item{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 06px 20px 0px 20px;
+
+}
+
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+
+
+.navbar .navbar-nav .nav-link:hover{
+    color: rgba(32,140,140,0.5);
+}
+
+#nav-quiz{
+    color:  rgba(32,140,140,1);
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    padding: 0;
+}
+
+
+/* hidden Quze App wrapper */
+
+.quizes-wrapper{
+    /* this must display none in final project */
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(1, 11, 29, 0.75);
+}
+
+#quize-rules{
+    /* this must display block in final project */
+    display: block;
+}
+#quize-question{
+    /* this must display none in final project */
+    display: none;
+}
+#quiz-result{
+    /* this must display none in final project */
+    display: none;
+}
+
+/* common CSS for all 3 quizes app box */
+.quize-box{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Start Quize App reules box */
+#quize-rules .quize-box{
+    max-width: 500px;
+}
+
+#quize-rules .rule-title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 15px 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(32,140,140,1);
+}
+
+#quize-rules .rule-list{
+    padding: 15px 35px;
+    margin: 0;
+
+}
+#quize-rules .rule-list .info{
+    margin: 0 0 15px 10px;
+    font-size: 17px;
+}
+
+#quize-rules .rule-footer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightgray;
+}
+/* End Quiz app Rules box css */
+
+/* Start Quiz app Question box css */
+#quize-question .quize-box{
+    max-width: 500px;
+}
+#quize-question .quiz-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 30px;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(10, 97, 97);
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(10, 97, 97,0.75);
+}
+
+#quize-question .quiz-title h2{
+    font-size: 21px;
+    font-weight: 600;
+    color: rgba(32,140,140,1);
+    padding-top: 10px;
+}
+#quize-question .quiz-title h2:nth-child(1){
+    color: black;
+}
+#quize-question .quiz-body{
+    padding: 25px 30px 20px 30px;
+    background: none;
+}
+#quize-question .quiz-body .que-text{
+    font-size: 19px;
+    font-weight: 400;
+    color: rgb(90, 90, 90);
+}
+#quize-question .option-list{
+    padding-top: 20px;
+    display: block;
+}
+.quiz-body .option-list .li{
+    background: white;
+    border: 1.5px solid #25A38F;
+    color: #25A38F;
+    border-radius: 25px;
+    padding: 8px 22px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 350;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.quiz-body .option-list .li:hover{
+    color: white;
+    background: #25A38F;
+    border-color: #b8caff;
+}
+
+.quiz-body .option-list .li .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    pointer-events: none;
+}
+/* wright Anser button CSS */
+.quiz-body .option-list .li .icon.tick{
+    color: white;
+    border-color: white;
+    background: 25A38F;
+}
+.quiz-body .option-list .li.right{
+    color: white;
+    border-color: #25A38F;
+    background: #25A38F;
+}
+
+/* wrong Answer Button CSS */
+.quiz-body .option-list .li .icon.cross{
+    color: white;
+    border-color: white;
+    background: #C44649;
+}
+.quiz-body .option-list .li.wrong{
+    color: white;
+    border-color: #C44649;
+    background: #C44649;
+}
+
+#quize-question .quiz-footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#quize-question .quiz-footer .next-btn,#quize-rules .continue-btn{
+    font-size: 16px;
+    width: 100px;
+    background: linear-gradient(145deg, #CACCCF, #FFFFFF);
+    color: rgb(10, 97, 97);
+    border-radius: 15px;
+    border: solid rgb(10, 97, 97);
+    box-shadow: 6.91px 6.91px 15px #86888A, -6.91px -6.91px 15px #FFFFFF;
+    padding: 3px 15px;
+    text-align: center;
+    cursor: pointer;
+}
+#quize-question .quiz-footer .next-btn:hover,#quize-rules .continue-btn:hover{
+    background: #0a6161;
+    box-shadow: inset 9.91px 9.91px 18px #095252, inset -9.91px -9.91px 18px #0C7070;
+    color: #ffffff;
+    border: solid #CACCCF;
+}
+
+/* End quize question window CSS */
+
+/* Star Quize Relust Window CSS */
+#quiz-result .quize-box{
+    max-width: 350px;
+    padding: 25px 30px;
+    text-align: center;
+}
+#quiz-result .result-title{
+    font-weight: 800;
+}
+#quiz-result .result-body .image img{
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+}
+#quiz-result .result-body span{
+    padding-bottom: 30px;
+}
+#quiz-result h2.score-txt{
+    color: cadetblue;
+}
+#quiz-result .result-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+#quiz-result .result-footer .replay-btn,#quiz-result .exit-btn{
+    width: 140px;
+    font-size: 16px;
+    background: linear-gradient(145deg, #CACCCF, #FFFFFF);
+    color: rgb(10, 97, 97);
+    border-radius: 15px;
+    border: solid rgb(10, 97, 97);
+    box-shadow: 6.91px 6.91px 15px #86888A, -6.91px -6.91px 15px #FFFFFF;
+    padding: 3px 15px;
+    text-align: center;
+    cursor: pointer;
+}
+#quiz-result .replay-btn:hover, #quiz-result .exit-btn:hover{
+    background: #0a6161;
+    box-shadow: inset 9.91px 9.91px 18px #095252, inset -9.91px -9.91px 18px #0C7070;
+    color: #ffffff;
+    border: solid #CACCCF;
+}
+
+
+/* Quiz Bodypart CSS */
+
+body{
+    background-image: linear-gradient(to top right,#1f2222, #1f8787);
+    background-attachment: fixed;
+    background-position: 0% 100%;
+}
+
+.body-part{
+    letter-spacing: 1px;
+}
+.body-part::-webkit-scrollbar{
+    width: 0px;
+}
+.body-part .body-title{
+    padding: 23px 50px 0 50px;
+    display: flex;
+}
+.body-part .title-logo {
+    display: flex;
+    justify-content: center;
+}
+.body-part .title-logo img{
+    align-self: center;
+    margin: auto;
+    width: 150px;
+}
+.body-part .body-title .title-txt{
+    color: rgb(215, 244, 248);
+    padding: 30px 0px 0px 30px;
+}
+.body-part .body-title .title-txt h1{
+    font-weight: bold;
+}
+.body-part hr{
+    display: block;
+    margin-top: 0.5;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+.body-part #lesson-tenses{
+    color: rgb(215, 244, 248);
+}
+.body-part .card{
+    position: relative;
+    color: #e6f5ff;
+    background-color: rgba(0, 0, 0, 0.212);
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid rgba(225, 255, 255, .4);
+    border-right: 2px solid rgba(225, 255, 255, .4);
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.body-part .card:hover{
+    transform: scale(1.05);
+}
+.body-part .card-body{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px 10px 8px ;
+}
+.body-part .card-body h5{
+    font-size: 16px;
+}
+.body-part .img{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.body-part .card img{
+    align-self: center;
+    width: 70px;
+    border-radius: 5px;
+}
+
+/*--footer*/
+.footer{
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 100vw;
+}
+
+.form-control{
+    border-right: none;
+}
+
+
+.send-email{
+ background-color: transparent;
+ margin-top: 0 !important;
+}
+.send-email:hover,.send-email.focus,.send-email.active{
+    background-color: transparent;
+    color:rgba(32,140,140,1);
+    font-size: small;
+}
+
+.footer-page-links ul li,.social-media ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+.footer-page-links ul li a,.social-media ul li a{
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.footer-page-links ul li a:hover,.social-media ul li a:hover{
+    color: rgba(32,140,140,1);
+}
+
+
+.footer-page-links{
+    font-size: 15px;
+}
+
+.copyright, .copyright a{
+    color: rgba(225, 255, 255, .8);
+    font-size: 10px;
+    text-decoration: none;
+    
+}
+
+/*--media quaries--*/
+@media only screen and (max-width: 768px) {
+    .form{
+        max-width: 40%;
+        margin: auto;
+    }
+    .body-part .card{    
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    .body-part .card-body h5{
+        font-size: 17px;
+    }
+    .body-part .body-title{
+        padding: 40px 0 0 0;
+    }
+
+}
+
+@media only screen and (max-width: 660px) {
+    .form{
+        max-width: 300px;
+        margin: auto;
+    }
+}

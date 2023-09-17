@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#home{
+    position: relative;
+}
+
+/*nav bar*/
+#logo{
+    width: 72px;
+    height: 40px;
+    margin: 0px 20px ;
+    padding: 0;
+    border-radius: 20px;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+.nav-item{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 06px 20px 0px 20px;
+
+}
+
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+
+
+.navbar .navbar-nav .nav-link:hover{
+    color: rgba(32,140,140,0.5);
+}
+
+#nav-home{
+    color:  rgba(32,140,140,1);
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    padding: 0;
+    max-width: 100vw;
+}
+
+.banner{
+    background-image: url(../images/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: 60% center;
+}
+
+.message{
+    top: 25%;
+    left: 10%;
+    position:absolute;
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+}
+.btn-set{
+    display: flex;
+    flex-wrap: wrap;
+    position:absolute;
+    top: 40%;
+    left: 10%;
+}
+.btn-set ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-right: 1rem;
+}
+.btn-set ul li{
+    padding: 10px 0px;
+}
+
+#g-btn button,#v-btn button,#s-btn button,#q-btn button{
+    width: 200px;
+    border-radius: 25px;
+}
+#v-btn button,#s-btn button{
+    background-color: rgba(32,140,140,1);
+    color: none;
+}
+#v-btn button:hover,#s-btn button:hover{
+    background-color: white;
+}
+
+/*--footer*/
+.footer{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.form-control{
+    border-right: none;
+}
+
+
+.send-email{
+ background-color: transparent;
+ margin-top: 0 !important;
+}
+.send-email:hover,.send-email.focus,.send-email.active{
+    background-color: transparent;
+    color:rgba(32,140,140,1);
+    font-size: small;
+}
+
+.footer-page-links ul li,.social-media ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+.footer-page-links ul li a,.social-media ul li a{
+    color: white;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.footer-page-links ul li a:hover,.social-media ul li a:hover{
+    color: rgba(32,140,140,1);
+}
+
+
+.footer-page-links{
+    font-size: 15px;
+}
+
+.copyright, .copyright a{
+    color: rgba(225, 255, 255, .8);
+    font-size: 10px;
+    text-decoration: none;
+    
+}
+
+/*--media quaries--*/
+@media only screen and (max-width: 768px) {
+    .form{
+        max-width: 40%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .form{
+        max-width: 300px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 440px){
+    
+    .message{
+        top: 15%;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .btn-set{
+        top: 35%;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 5px;
+    }
+    .btn-set ul li{
+        text-align: center;
+       padding: 8px; 
+    }
+    .btn-set ul{
+        margin: 0;
+        padding: 0;
+        font-size: 2px;
+    }
+    .col1{
+        flex: 100%;
+        max-width: 100%;
+
+    }
+    .row1{
+        flex: 100%;
+        max-width: 100%;
+    }
+    
+    #g-btn button,#v-btn button,#s-btn button,#q-btn button{
+        width: 150px;
+        border-radius: 25px;
+        font-size: 20px;
+        padding: 3px;
+    }
+    #g-btn button{
+        background-color: rgba(32,140,140,1);
+    }
+    #g-btn button:hover{
+        background-color: white;
+    }
+    #v-btn button{
+        background-color: transparent;
+    }
+
+}
+
+@media screen  and (max-width: 576px) and (min-width: 440px){
+    .message{
+        left: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 5px;
+    }
+    .btn-set{
+        left: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-set ul li{
+        text-align: center;
+    }
+    .btn-set ul{
+        margin: 0;
+        padding: 0;
+    }
+    .row1 ul li{
+        margin: 0;
+    }
+    .col1 ul li{
+        margin: 0;
+        padding-left: 7px;
+    }
+    
+
+}
+
